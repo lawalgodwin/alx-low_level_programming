@@ -3,7 +3,7 @@
 /**
   * main - Entry point
   *
-  * Description - Getting the size of Memory offerable to data types by the host
+  * Description - Getting the size of Memory offerable by the host
   *
   * Return: Always return 0 (Success)
   *
