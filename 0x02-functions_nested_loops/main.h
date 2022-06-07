@@ -1,23 +1,6 @@
-/**
- * _putchar - prints "_putchar to the terminal"
- *
- * Return: Always returns nothing
- *
- */
+#ifndef MAIN
+#define MAIN
 
-void _putchar(void)
-{
-	char str[9] = "_putchar";
+int _putchar(char c);
 
-	int i = 0;
-
-	while (str[i] != '\0')
-	{
-		putchar(str[i]);
-
-		i++;
-	}
-
-	putchar('\n');
-
-}
+#endif /* MAIN */
