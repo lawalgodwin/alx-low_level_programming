@@ -11,6 +11,8 @@ int _abs(int);
 
 int _isalpha(int c);
 
+int _isdigit(int c);
+
 void print_alphabet(void);
 
 int _isupper(int c);
