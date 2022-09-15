@@ -15,6 +15,8 @@ int _isdigit(int c);
 
 void print_alphabet(void);
 
+void print_numbers(void);
+
 int _isupper(int c);
 
 int mul(int a, int b);
