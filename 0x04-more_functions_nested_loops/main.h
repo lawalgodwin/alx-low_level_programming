@@ -17,6 +17,8 @@ void print_alphabet(void);
 
 int _isupper(int c);
 
+int mul(int a, int b);
+
 void print_alphabet_x10(void);
 
 #endif /* MAIN */
