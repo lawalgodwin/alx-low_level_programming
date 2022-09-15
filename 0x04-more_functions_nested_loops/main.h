@@ -9,6 +9,8 @@ int print_sign(int n);
 
 int _abs(int);
 
+void print_most_numbers(void);
+
 int _isalpha(int c);
 
 int _isdigit(int c);
