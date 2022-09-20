@@ -14,10 +14,14 @@ void print_rev(char *str)
 {
 	int i;
 
+	int j;
+
 	for (i = 0; *(str + i) != '\0'; i++)
 		;
 
-	for (; i >= 0; i--, _putchar(*(str + i)))
+	for (j = i; j >= 0; j--, _putchar(*(str + j)))
 		;
+
+	_putchar('\n');
 
 }
