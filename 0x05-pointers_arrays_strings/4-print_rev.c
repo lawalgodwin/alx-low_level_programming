@@ -25,7 +25,10 @@ void print_rev(char *str)
 		return;
 	}
 
-	for (j = i; j >= 0; j--, _putchar(*(str + j)))
-		;
+	for (j = i; j >= 0; j--)
+
+		_putchar(*(str + j));
+
+	_putchar('\n');
 
 }
