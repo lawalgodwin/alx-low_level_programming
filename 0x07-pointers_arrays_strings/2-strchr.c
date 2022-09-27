@@ -19,5 +19,7 @@ char *_strchr(char *s, char c)
 			return (s + position);
 	}
 
-	return (NULL);
+	s = 0;
+
+	return (s);
 }
