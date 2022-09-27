@@ -12,7 +12,7 @@
 
 char *_memset(char *s, char b, unsigned int n)
 {
-	int bytes = 0;
+	unsigned int bytes = 0;
 
 	for (; bytes < n; bytes++)
 
