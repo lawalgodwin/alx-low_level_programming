@@ -7,19 +7,23 @@
   *
   * Return: Returns the memory location of the first occurence of `c`
   */
-
 char *_strchr(char *s, char c)
+
 {
-	int position = 0;
 
-	for (; *(s + position); position++)
-	{
-		if (*(s + position) == c)
+		while (*s)
+		{
+			if (*s == c)
 
-			return (s + position);
-	}
+				return (s);
 
-	s = 0;
+			else if (*(s + 1) == c)
 
-	return (s);
+				return (s + 1);
+
+			s++;
+		}
+
+		return (s + 1);
+
 }
