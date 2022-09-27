@@ -10,7 +10,7 @@
   * Return: returns the pointer to the `dest` memory location
   */
 
-char *_memcpy(char *dest, char src, unsigned int n)
+char *_memcpy(char *dest, char *src, unsigned int n)
 {
 	unsigned int bytes = 0;
 
