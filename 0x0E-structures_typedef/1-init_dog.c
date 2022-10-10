@@ -1,5 +1,7 @@
 #include <stdlib.h>
 
+#include "dog.h"
+
 
 /**
   * init_dog - The fuction initialises object of type dog
