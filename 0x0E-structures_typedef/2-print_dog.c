@@ -20,13 +20,12 @@ void print_dog(struct dog *d)
 
 	char *n = (d->name != NULL) ? d->name : "(nil)";
 
-	float a = (d->age != NULL) ? d->age : "(nil)";
 
 	char *o = (d->owner) != NULL ? d->owner : "(nil)";
 
 	printf("Name: %s\n", n);
 
-	printf("Age: %f\n", a);
+	printf("Age: %f\n", d->age);
 
 	printf("Owner: %s\n", o);
 }
