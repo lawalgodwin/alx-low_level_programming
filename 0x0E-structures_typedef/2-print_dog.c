@@ -18,10 +18,10 @@ void print_dog(struct dog *d)
 
 		return;
 
-	char *n = (d->name != NULL) ? d->name : "(nil)";
+	char *n = (d->name == NULL) ? "(nil)" : (d->name);
 
 
-	char *o = (d->owner) != NULL ? d->owner : "(nil)";
+	char *o = (d->owner) == NULL ? "(nil)" : (d->owner);
 
 	printf("Name: %s\n", n);
 
