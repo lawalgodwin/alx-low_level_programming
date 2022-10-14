@@ -1,3 +1,7 @@
+#include <stdlib.h>
+
+#include "function_pointers.h"
+
 /**
   * array_iterator - Iterates throuh an array using a funtion Ptr
   *
