@@ -31,21 +31,21 @@ list_t *add_node(list_t **head, const char *str)
 
 	newnode->str = strdup(str);
 
-	if (currentnode == NULL)
+	if (*head == NULL)
 	{
 		newnode->next = NULL;
 
-		currentnode = newnode;
+		*head = newnode;
 	}
 
 	else
 	{
-		list_t *tmp = currentnode;
+		list_t *tmp = *head;
 
 		newnode->next = tmp;
 
-		currentnode = newnode;
+		*head = newnode;
 	}
 
-	return (currentnode)
+	return (newnode);
 }
