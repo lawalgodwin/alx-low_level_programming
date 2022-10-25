@@ -32,9 +32,9 @@ list_t *add_node_end(list_t **head, const char *str)
 
 	newnode->next = NULL;
 
-	if (currentnode == NULL)
+	if (*head == NULL)
 
-		currentnode = newnode;
+		*head = newnode;
 
 	else
 	{
@@ -42,9 +42,9 @@ list_t *add_node_end(list_t **head, const char *str)
 		{
 			currentnode = currentnode->next;
 		}
+
+		currentnode->next = newnode;
 	}
 
-	currentnode->next = newnode;
-
-	return (currentnode);
+	return (*head);
 }
