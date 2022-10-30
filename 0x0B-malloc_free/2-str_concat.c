@@ -61,7 +61,7 @@ int _strlen(char *str)
 
 		*str = ' ';
 
-	for (i = 0; *(str + i) != NULL; i++)
+	for (i = 0; *(str + i) != '\0'; i++)
 		;
 
 	return (i);
