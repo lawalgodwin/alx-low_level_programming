@@ -14,15 +14,6 @@ int _strlen(char *str);
 
 char *str_concat(char *s1, char *s2)
 {
-
-	if (s1 == NULL)
-
-		*s1 = ' ';
-
-	if (s2 == NULL)
-
-		*s2 = ' ';
-
 	int s1_len = _strlen(s1);
 
 	int s2_len = _strlen(s2);
@@ -66,7 +57,11 @@ int _strlen(char *str)
 {
 	int i;
 
-	for (i = 0; *(str + i); i++)
+	if (str == NULL)
+
+		*str = ' ';
+
+	for (i = 0; *(str + i) != NULL; i++)
 		;
 
 	return (i);
