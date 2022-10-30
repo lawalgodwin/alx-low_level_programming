@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-  * craete_array - Dynamically create an array and initialize with a value
+  * create_array - Dynamically create an array and initialize with a value
   *
   * @size: The size of the array to be created
   *
