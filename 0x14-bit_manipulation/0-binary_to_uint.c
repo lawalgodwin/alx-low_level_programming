@@ -17,7 +17,7 @@ unsigned int binary_to_uint(const char *b)
 
 	unsigned int sum = 0, power = 0;
 
-	while (*(b++))
+	while (*(b))
 		b++;
 
 	b--;
