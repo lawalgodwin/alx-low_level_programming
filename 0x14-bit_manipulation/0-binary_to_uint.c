@@ -10,12 +10,12 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	if (!b)
-		return (0);
-
 	const char *p = b;
 
 	unsigned int sum = 0, power = 0;
+
+	if (!b)
+		return (0);
 
 	while (*(b))
 		b++;
