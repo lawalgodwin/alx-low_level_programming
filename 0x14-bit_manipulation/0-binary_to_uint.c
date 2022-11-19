@@ -10,7 +10,7 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	if (b == NULL)
+	if (!b)
 		return (0);
 
 	const char *p = b;
