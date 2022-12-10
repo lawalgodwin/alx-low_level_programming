@@ -14,14 +14,12 @@
 
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
-	dlistint_t *target_node;
-
 	unsigned int count = 0;
 
 	if (head == NULL)
 
 		return (NULL);
-	
+
 	if (head != NULL)
 
 		while (head->prev != NULL)
@@ -31,16 +29,13 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 	while (head != NULL)
 	{
 		if (count == index)
-		{
-			target_node = head;
 
 			break;
-		}
 
 		count = count + 1;
 
 		head = head->next;
 	}
 
-	return (target_node);
+	return (head);
 }
