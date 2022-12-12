@@ -18,23 +18,22 @@ int int_index(int *array, int size, int (*cmp)(int))
 
 	int index = 0;
 
-	if (!array || !cmp)
-
-		return;
-
-	if (size <= 0)
-
-		return (-1);
-
-	while (index < size)
+	if (array && cmp)
 	{
-		result = cmp(*(array + index));
+		if (size <= 0)
 
-		if (index != 0)
+			return (-1);
 
-			return (index);
+		while (index < size)
+		{
+			result = cmp(*(array + index));
 
-		index++;
+			if (index != 0)
+
+				return (index);
+
+			index++;
+		}
 	}
 
 	return (-1);
