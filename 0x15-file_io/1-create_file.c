@@ -29,7 +29,7 @@ int create_file(const char *filename, char *text_content)
 		text_content = "";
 	else
 	{
-		written_bytes = write(fd, text_content, _strlen(text_content) + 1);
+		written_bytes = write(fd, text_content, _strlen(text_content));
 
 		close(fd);
 
