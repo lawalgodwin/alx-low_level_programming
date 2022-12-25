@@ -2,11 +2,8 @@
 
 /**
   * read_textfile - Read the content of a file then print to stdout
-  *
   * @filename: the file
-  *
   * @letters: The number of bytes to be read.It must be an unsigned int
-  *
   * Return: the number of bytes printed to the screen(stdout) or -1 if error
   */
 
@@ -14,11 +11,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	char *buffer = NULL;
 
-	ssize_t read_bytes = 0;
-
-	ssize_t written_bytes = 0;
-
-	ssize_t fd;
+	ssize_t read_bytes = 0, written_bytes = 0, fd;
 
 	if (filename == NULL)
 
@@ -47,25 +40,16 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	{
 		free(buffer);
 
-		buffer = NULL;
-
 		return (0);
 	}
 
 	written_bytes = write(STDOUT_FILENO, buffer, read_bytes);
 
-	if (written_bytes != read_bytes)
-	{
-		free(buffer);
-
-		buffer = NULL;
-
-		return (0);
-	}
-
 	free(buffer);
 
-	buffer = NULL;
+	if (written_bytes != read_bytes)
+
+		return (0);
 
 	return (written_bytes);
 }
