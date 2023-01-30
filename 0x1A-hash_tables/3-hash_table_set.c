@@ -16,6 +16,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	hash_node_t *item;
 
+	hash_node_t *tmp;
+
 	unsigned long int index;
 
 	if (ht == NULL || key == NULL || *key == '\0' || value == NULL)
@@ -33,6 +35,23 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	item->value = strdup(value);
 
 	index = key_index((unsigned char *)key, ht->size);
+
+	/*check if key already exits in the list*/
+
+	while (tmp && strcmp(tmp->key, key) != 0)
+
+		tmp = tmp->next;
+
+	/*if key already exists, update the value*/
+
+	if (tmp)
+	{
+		free(tmp->value);
+
+		tmp->value = strdup(value);
+
+		return (1);
+	}
 
 	if (ht->array[index] == NULL)
 	{
