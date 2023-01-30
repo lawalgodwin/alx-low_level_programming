@@ -1,4 +1,5 @@
 #include "hash_tables.h"
+size_t update_htable(hash_node_t *item, const char *key, const char *value);
 
 /**
   * hash_table_set - insert item into the hash table
@@ -14,7 +15,7 @@
 
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	hash_node_t *item, *tmp;
+	hash_node_t *item;
 
 	unsigned long int index;
 
@@ -43,9 +44,29 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (1);
 	}
 
-	tmp = ht->array[index];
-
 	/*traverse the list to check if key already exist*/
+
+	if (update_htable(ht->array[index], key, value))
+		return (1);
+
+	item->next = ht->array[index];
+
+	ht->array[index] = item;
+
+	return (1);
+}
+
+/**
+  * update_htable - Updates the hash table with new value if key already exist
+  * @ht: The hash table pointer
+  * @key: the key pointer
+  * @value: the new value pointer
+  * Return: 1 if updated 0 otherwise
+  */
+
+size_t update_htable(hash_node_t *item, const char *key, const char *value)
+{
+	hash_node_t *tmp = item;
 
 	while (tmp)
 	{
@@ -55,15 +76,11 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 			tmp->value = strdup(value);
 
-			return(1);
+			return (1);
 		}
 
 		tmp = tmp->next;
 	}
 
-	item->next = ht->array[index];
-
-	ht->array[index] = item;
-
-	return (1);
+	return (0);
 }
