@@ -58,7 +58,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 /**
   * update_htable - Updates the hash table with new value if key already exist
-  * @ht: The hash table pointer
+  * @item: The hash table pointer
   * @key: the key pointer
   * @value: the new value pointer
   * Return: 1 if updated 0 otherwise
