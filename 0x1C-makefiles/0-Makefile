@@ -1,0 +1,3 @@
+# create an executable called school from the source codes
+all:
+	gcc -Wall -Werror -Wextra -pedantic -std=gnu89 school.c main.c -o school
