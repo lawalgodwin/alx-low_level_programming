@@ -1,6 +1,6 @@
 # Build all c files stored in a variable SRC
 # The compiler must be stored in a variable CC
-CC := gcc
+CC = gcc
 SRC = school.c main.c
 
 all: $(SRC)
