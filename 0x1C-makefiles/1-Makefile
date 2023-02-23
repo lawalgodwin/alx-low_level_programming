@@ -1,0 +1,7 @@
+# Build all c files stored in a variable SRC
+# The compiler must be stored in a variable CC
+CC := gcc
+SRC := $(wildcard *.c)
+
+all:
+	$(CC) -Wall -Werror -Wextra -pedantic -std=gnu89 $(SRC) -o school
